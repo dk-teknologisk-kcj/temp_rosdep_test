@@ -21,4 +21,4 @@ install-script: |
   make -j"$(nproc)"
   sudo make install
 exec-path: Livox-SDK2-2.8.0
-depends: [cmake, build-essential, git]
+depends: [cmake, git]
