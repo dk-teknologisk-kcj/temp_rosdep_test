@@ -1,6 +1,5 @@
-uri: "https://github.com/Livox-SDK/Livox-SDK2/archive/refs/tags/v2.8.0.tar.gz"
+uri: "https://github.com/Livox-SDK/Livox-SDK2/archive/refs/tags/v1.2.5.tar.gz"
 md5sum: ""
-alternate-uri: "https://codeload.github.com/Livox-SDK/Livox-SDK2/tar.gz/refs/tags/v2.8.0"
 check-presence-script: |
   #!/bin/bash
   set -euo pipefail
