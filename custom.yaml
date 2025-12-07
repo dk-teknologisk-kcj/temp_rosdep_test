@@ -1,5 +1,5 @@
 livox_sdk2:
   ubuntu:
-    noble:
+    "*":
       source:
         uri: https://raw.githubusercontent.com/dk-teknologisk-kcj/temp_rosdep_test/main/livox_sdk2.rdmanifest
