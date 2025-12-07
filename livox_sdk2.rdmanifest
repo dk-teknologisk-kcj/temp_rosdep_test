@@ -1,0 +1,24 @@
+uri: "https://github.com/Livox-SDK/Livox-SDK2/archive/refs/tags/v2.8.0.tar.gz"
+md5sum: ""
+alternate-uri: "https://codeload.github.com/Livox-SDK/Livox-SDK2/tar.gz/refs/tags/v2.8.0"
+check-presence-script: |
+  #!/bin/bash
+  set -euo pipefail
+  if ls /usr/local/lib/liblivox_lidar_sdk_* >/dev/null 2>&1; then
+    exit 0
+  fi
+  if [ -d "/usr/local/include/livox_lidar_sdk" ] || ls /usr/local/include/livox_lidar_* >/dev/null 2>&1; then
+    exit 0
+  fi
+  echo "Livox SDK2 not installed in /usr/local"
+  exit 1
+install-script: |
+  #!/bin/bash
+  set -euo pipefail
+  mkdir -p build
+  cd build
+  cmake ..
+  make -j"$(nproc)"
+  sudo make install
+exec-path: Livox-SDK2-2.8.0
+depends: [cmake, build-essential, git]
