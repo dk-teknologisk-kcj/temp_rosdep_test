@@ -1,4 +1,4 @@
-uri: "https://github.com/Livox-SDK/Livox-SDK2/archive/refs/tags/v1.2.5.tar.gz"
+uri: "https://github.com/teknologisk-institut/Livox-SDK2/archive/refs/heads/pr-57.tar.gz"
 md5sum: ""
 check-presence-script: |
   #!/bin/bash
@@ -19,5 +19,5 @@ install-script: |
   cmake ..
   make -j"$(nproc)"
   sudo make install
-exec-path: Livox-SDK2-1.2.5
+exec-path: Livox-SDK2-pr-57
 depends: [cmake, git]
